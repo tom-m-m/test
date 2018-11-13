@@ -154,7 +154,7 @@
       "label": "Openstack Network Id",
       "description": "生成済み",
       "type": "string",
-      "default": "",
+      "default": "e6c6a0d8-f2df-4fac-ba0e-43bd81c0cd19",
       "validation": "",
       "group_name": "openstack_compute_instance_v2_networks",
       "required": true,
