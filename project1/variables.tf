@@ -49,11 +49,6 @@ variable "openstack_flavor_name" {
   description = "生成済み"
 }
 
-variable "openstack_key_pair_name" {
-  type = "string"
-  description = "生成済み"
-}
-
 variable "openstack_network_id" {
   type = "string"
   description = "生成済み"
