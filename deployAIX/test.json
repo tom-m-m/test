@@ -1,0 +1,145 @@
+{
+  "service": {
+    "specVersion": "v3",
+    "catalog_metadata": {
+      "name": "deployAIX2",
+      "description": "",
+      "image": "serviceicon_1.svg",
+      "category": "CloudServices",
+      "bullets": [
+        {
+          "title": "Cloud Provider",
+          "description": "IBM PowerVC Platform"
+        }
+      ],
+      "providerDisplayName": "IBM",
+      "longDescription": "",
+      "documentationUrl": "",
+      "supportUrl": "",
+      "bindable": false,
+      "updatable": "",
+      "author": "demo"
+    },
+    "tags": [],
+    "actions": [
+      {
+        "type": "provision",
+        "name": "Provision",
+        "description": "Default action for deployment of service",
+        "input_parameters": [
+          {
+            "name": "VMName",
+            "label": "VM Name",
+            "customtype": "string",
+            "type": "string",
+            "immutable": false,
+            "hidden": false,
+            "required": true,
+            "secured": false,
+            "description": "Enter VM name"
+          },
+          {
+            "name": "openstack_flavor_name",
+            "label": "計算テンプレート",
+            "customtype": "string",
+            "type": "string",
+            "immutable": false,
+            "hidden": false,
+            "required": false,
+            "secured": false,
+            "description": ""
+          },
+          {
+            "name": "IPAddress",
+            "label": "IPアドレス",
+            "customtype": "string",
+            "type": "string",
+            "immutable": false,
+            "hidden": false,
+            "required": false,
+            "secured": false,
+            "description": "Enter IP Address for VM"
+          }
+        ],
+        "flow": {
+          "conditions": [],
+          "templates": [
+            {
+              "deploy-AIX": {
+                "title": "deploy-AIX_9510d2",
+                "template_name": "deploy-AIX",
+                "version": "master",
+                "id": "deployai1da8639e",
+                "template_type": "Terraform",
+                "template_content_type": "Other",
+                "template_provider": "Other",
+                "instance_name": "",
+                "cloud_connection_name": "Other",
+                "template_data_objects": {},
+                "template_params": {
+                  "openstack_user_name": "demo",
+                  "openstack_password": "^(ZGVtb2RlbW8=)",
+                  "openstack_project_name": "ibm-default",
+                  "openstack_domain_name": "Default",
+                  "openstack_auth_url": "https://9.188.29.93:5000/v3",
+                  "openstack_region": "RegionOne",
+                  "test-server_name": "${input_parameters.VMName}",
+                  "openstack_image_name": "AIX72TL0SP2",
+                  "openstack_flavor_name": "${input_parameters.openstack_flavor_name}",
+                  "openstack_network_id": "e6c6a0d8-f2df-4fac-ba0e-43bd81c0cd19",
+                  "test-server-ip": "${input_parameters.IPAddress}"
+                },
+                "outputs": []
+              }
+            }
+          ],
+          "resthooks": [],
+          "notifications": [],
+          "sequence": {
+            "0": "deployai1da8639e"
+          }
+        },
+        "output_parameters": []
+      }
+    ],
+    "plans": [
+      {
+        "name": "small",
+        "description": "To deploy a small plan",
+        "actions": [],
+        "plan_parameters": [
+          {
+            "name": "openstack_flavor_name",
+            "label": "計算テンプレート",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": false,
+            "required": false,
+            "secured": false,
+            "description": "",
+            "default": "small"
+          }
+        ]
+      },
+      {
+        "name": "tiny",
+        "plan_parameters": [
+          {
+            "name": "openstack_flavor_name",
+            "label": "計算テンプレート",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": false,
+            "required": false,
+            "secured": false,
+            "description": "",
+            "default": "tiny"
+          }
+        ],
+        "description": "To deploy a tiny plan"
+      }
+    ]
+  }
+}
