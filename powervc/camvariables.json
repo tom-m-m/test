@@ -1,0 +1,182 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "-------openstack_compute_instance_v2.test-server",
+      "label": "インスタンス - openstack_compute_instance_v2.test-server"
+    },
+    { "name": "---", "label": "その他" },
+    {
+      "name": "----openstack",
+      "label": "その他 - openstack"
+    },
+    {
+      "name": "______",
+      "label": "インスタンス"
+    },
+    {
+      "name": "openstack_compute_instance_v2_networks",
+      "label": "openstack_compute_instance_v2 Networks"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "openstack_user_name",
+      "label": "Openstack User Name",
+      "description": "生成済み",
+      "type": "string",
+      "default": "demo",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "openstack_password",
+      "label": "Openstack Password",
+      "description": "生成済み",
+      "type": "string",
+      "default": "demodemo",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "openstack_project_name",
+      "label": "Openstack Project Name",
+      "description": "生成済み",
+      "type": "string",
+      "default": "ibm-default",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "openstack_domain_name",
+      "label": "Openstack Domain Name",
+      "description": "生成済み",
+      "type": "string",
+      "default": "Default",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "openstack_auth_url",
+      "label": "Openstack Auth Url",
+      "description": "生成済み",
+      "type": "string",
+      "default": "https://9.188.29.93:5000/v3",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "openstack_region",
+      "label": "Openstack Region",
+      "description": "生成済み",
+      "type": "string",
+      "default": "RegionOne",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "test-server_name",
+      "label": "Server Name",
+      "description": "生成済み",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "openstack_image_name",
+      "label": "Openstack Image Name",
+      "description": "イメージ名",
+      "type": "string",
+      "default": "AIX72TL0SP2",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "openstack_flavor_name",
+      "label": "Openstack Flavor Name",
+      "description": "計算テンプレート",
+      "type": "string",
+      "default": "tiny",
+      "validation": "",
+      "group_name": "______",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "test-server-ip",
+      "label": "test-server-ip",
+      "description": "生成済み",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "network_name",
+      "label": "network_name",
+      "description": "生成済み",
+      "type": "string",
+      "default": "ISCoC_LAN",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}
